@@ -2,6 +2,19 @@ import pickle
 import streamlit as st
 import pandas as pd
 
+# Add background color
+def add_bg_from_local():
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(100,0,36,1) 0%, rgba(45,177,179,1) 35%, rgba(0,219,245,1) 100%);
+    }}
+    </style>
+    """,unsafe_allow_html=True)
+add_bg_from_local()
+
 st.title('Model Validation')
 st.image('ConfusionMatrix_WithAnnotations.png')
 model = pickle.load(open('test_model.pkl','rb'))
