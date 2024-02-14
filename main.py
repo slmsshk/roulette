@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 st.title('Model Validation')
-st.image('ConfusionMatrix.png')
+st.image('ConfusionMatrix_WithAnnotations.png')
 model = pickle.load(open('test_model.pkl','rb'))
 features = model.feature_names_in_
 text = st.text_input('Enter the numbers seperated with , eg:1,2,3,4,5,.....')
